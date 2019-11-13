@@ -81,6 +81,8 @@ export default class Main extends Component {
                         placeholder="Adicionar Usuario"
                         value={newUser}
                         onChangeText={text => this.setState({ newUser: text })}
+                        returnKeyType="send"
+                        onSubmitEditing={this.handleAddUser}
                     />
                     <SubmitButton
                         loading={loading}
