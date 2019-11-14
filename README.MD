@@ -13,6 +13,7 @@
     <li>Styled-Components, para estilização de todos os componentes</li>
     <li>Eslint, Prettier, para padronização do codigo</li>
     <li>Reacatron, para debug da aplicação</li>
+    <li>WebView, abrindo um navegador dentro do proprio app, para visualizar os repositorios</li>
 </ul>
 
 <h3>
