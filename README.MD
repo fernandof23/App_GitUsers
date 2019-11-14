@@ -1,6 +1,6 @@
 ## Git Starreds
 
-<h2>App Mobile, desenvolvido em React-native, em que é possivel adicionar usuarios do git, e acompanhar os repositorios que o mesmo deu star(Like)</h2>
+<h3>App Mobile, desenvolvido em React-native, em que é possivel adicionar usuarios do git, e acompanhar os repositorios que o mesmo deu star(Like)</h3>
 
 <div style="border-bottom:1px solid #eee"></div>
 
@@ -46,10 +46,10 @@ ou:
 <div style="border-bottom:1px solid #eee"></div>
 
 
-<h2>
-    Desenvolvido por Fernando Santos><br/>
+<h3>
+    Desenvolvido por Fernando Santos<br/>
      <a href="https://www.linkedin.com/in/fernando-santos-686632122/">Linkedin</a>
-</h2>
+</h3>
 
 <h4>Desenvolvido durante o BootCamp Gostack da Rocketseat </h4>
 
