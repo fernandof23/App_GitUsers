@@ -36,6 +36,7 @@ export default class User extends Component {
         page: 1,
         nextLoad: false,
         refreshing: false,
+        morePages: 30,
     };
 
     componentDidMount() {
@@ -43,9 +44,6 @@ export default class User extends Component {
     }
 
     load = async (page = 1) => {
-        if (page >= 2) {
-            this.setState({ nextLoad: true });
-        }
         const { navigation } = this.props;
         const user = navigation.getParam('user');
         const { stars } = this.state;
@@ -55,6 +53,7 @@ export default class User extends Component {
                 page,
             },
         });
+        const pages = response.data.length;
 
         this.setState({
             stars: page >= 2 ? [...stars, ...response.data] : response.data,
@@ -62,13 +61,17 @@ export default class User extends Component {
             loading: false,
             refreshing: false,
             nextLoad: false,
+            morePages: pages,
         });
     };
 
     loadMore = () => {
-        const { page } = this.state;
-        const nextPage = page + 1;
-        this.load(nextPage);
+        const { page, morePages } = this.state;
+        if (morePages >= 30) {
+            const nextPage = page + 1;
+            this.setState({ nextLoad: true });
+            this.load(nextPage);
+        }
     };
 
     refreshList = () => {
